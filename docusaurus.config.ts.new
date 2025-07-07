@@ -53,7 +53,21 @@ const config: Config = {
           editUrl:
             'https://github.com/Krydix/It-Security-Website/tree/main/',
         },
-        // Remove blog configuration - we're using sprint documentation instead
+        blog: {
+          showReadingTime: true,
+          feedOptions: {
+            type: ['rss', 'atom'],
+            xslt: true,
+          },
+          // Please change this to your repo.
+          // Remove this to remove the "edit this page" links.
+          editUrl:
+            'https://github.com/Krydix/It-Security-Website/tree/main/',
+          // Useful options to enforce blogging best practices
+          onInlineTags: 'warn',
+          onInlineAuthors: 'warn',
+          onUntruncatedBlogPosts: 'warn',
+        },
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -77,6 +91,7 @@ const config: Config = {
           position: 'left',
           label: 'Study Guide',
         },
+        {to: '/blog', label: 'Notes', position: 'left'},
         {
           href: 'https://github.com/Krydix/It-Security-Website',
           label: 'GitHub',
@@ -122,28 +137,11 @@ const config: Config = {
           ],
         },
         {
-          title: 'Sprint Documentation',
+          title: 'Resources',
           items: [
             {
-              label: 'Sprint 1 - VM Setup',
-              to: '/docs/sprint-documentation/sprint-1',
-            },
-            {
-              label: 'Sprint 2 - Hardening',
-              to: '/docs/sprint-documentation/sprint-2',
-            },
-          ],
-        },
-        {
-          title: 'Deployment',
-          items: [
-            {
-              label: 'Production Setup',
-              to: '/docs/production-deployment',
-            },
-            {
-              label: 'Windows Security',
-              to: '/docs/windows-security-analysis',
+              label: 'Study Notes',
+              to: '/blog',
             },
             {
               label: 'GitHub',
