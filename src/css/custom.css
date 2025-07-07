@@ -1,0 +1,360 @@
+/**
+ * Modern, minimalistic gray theme for IT Security Study Guide
+ * Designed for professional, clean appearance with excellent readability
+ */
+
+/* Modern Gray Color Palette */
+:root {
+  /* Primary colors - Professional grays */
+  --ifm-color-primary: #4a5568;
+  --ifm-color-primary-dark: #2d3748;
+  --ifm-color-primary-darker: #1a202c;
+  --ifm-color-primary-darkest: #171923;
+  --ifm-color-primary-light: #718096;
+  --ifm-color-primary-lighter: #a0aec0;
+  --ifm-color-primary-lightest: #cbd5e0;
+
+  /* Background colors */
+  --ifm-background-color: #ffffff;
+  --ifm-background-surface-color: #f8f9fa;
+  --ifm-hero-background-color: #f8f9fa;
+  
+  /* Text colors */
+  --ifm-font-color-base: #2d3748;
+  --ifm-font-color-secondary: #4a5568;
+  --ifm-heading-color: #1a202c;
+  
+  /* Borders and shadows */
+  --ifm-border-color: #e2e8f0;
+  --ifm-card-border-color: #e2e8f0;
+  --ifm-navbar-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  
+  /* Code and syntax highlighting */
+  --ifm-code-font-size: 95%;
+  --ifm-code-background: #f7fafc;
+  --ifm-code-border-color: #e2e8f0;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.08);
+  
+  /* Accent colors for security elements */
+  --security-green: #48bb78;
+  --security-yellow: #ed8936;
+  --security-red: #f56565;
+  --security-blue: #4299e1;
+  
+  /* Modern typography */
+  --ifm-font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --ifm-font-family-monospace: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+  --ifm-font-size-base: 16px;
+  --ifm-line-height-base: 1.6;
+  
+  /* Spacing and layout */
+  --ifm-spacing-horizontal: 1.5rem;
+  --ifm-spacing-vertical: 1.5rem;
+  --ifm-navbar-height: 60px;
+  
+  /* Border radius for modern look */
+  --ifm-border-radius: 8px;
+  --ifm-card-border-radius: 12px;
+  --ifm-button-border-radius: 6px;
+}
+
+/* Dark mode - Sophisticated dark gray palette */
+[data-theme='dark'] {
+  /* Primary colors for dark mode */
+  --ifm-color-primary: #a0aec0;
+  --ifm-color-primary-dark: #718096;
+  --ifm-color-primary-darker: #4a5568;
+  --ifm-color-primary-darkest: #2d3748;
+  --ifm-color-primary-light: #cbd5e0;
+  --ifm-color-primary-lighter: #e2e8f0;
+  --ifm-color-primary-lightest: #f7fafc;
+
+  /* Dark backgrounds */
+  --ifm-background-color: #1a1a1a;
+  --ifm-background-surface-color: #212121;
+  --ifm-hero-background-color: #1a1a1a;
+  
+  /* Dark text colors */
+  --ifm-font-color-base: #e2e8f0;
+  --ifm-font-color-secondary: #a0aec0;
+  --ifm-heading-color: #f7fafc;
+  
+  /* Dark borders */
+  --ifm-border-color: #2d3748;
+  --ifm-card-border-color: #2d3748;
+  --ifm-navbar-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  
+  /* Dark code styling */
+  --ifm-code-background: #2d3748;
+  --ifm-code-border-color: #4a5568;
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
+  
+  /* Dark accent colors */
+  --security-green: #68d391;
+  --security-yellow: #fbb347;
+  --security-red: #fc8181;
+  --security-blue: #63b3ed;
+}
+
+/* Global styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--ifm-font-family-base);
+  line-height: var(--ifm-line-height-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography improvements */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Navigation bar styling */
+.navbar {
+  background: var(--ifm-background-color);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--ifm-border-color);
+  box-shadow: var(--ifm-navbar-shadow);
+}
+
+.navbar__title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: -0.025em;
+}
+
+.navbar__item {
+  font-weight: 500;
+}
+
+/* Hero section styling */
+.hero {
+  background: linear-gradient(135deg, var(--ifm-hero-background-color) 0%, var(--ifm-background-surface-color) 100%);
+  padding: 4rem 0;
+}
+
+.hero__title {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--ifm-heading-color) 0%, var(--ifm-color-primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero__subtitle {
+  font-size: 1.25rem;
+  font-weight: 400;
+  opacity: 0.8;
+  margin-bottom: 2rem;
+}
+
+/* Card styling */
+.card {
+  border: 1px solid var(--ifm-card-border-color);
+  border-radius: var(--ifm-card-border-radius);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Button styling */
+.button {
+  border-radius: var(--ifm-button-border-radius);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.button--primary {
+  background: var(--ifm-color-primary);
+  border-color: var(--ifm-color-primary);
+}
+
+.button--primary:hover {
+  background: var(--ifm-color-primary-dark);
+  border-color: var(--ifm-color-primary-dark);
+  transform: translateY(-1px);
+}
+
+/* Code block styling */
+.prism-code {
+  border-radius: var(--ifm-border-radius);
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.9rem;
+}
+
+/* Table styling */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+th {
+  background: var(--ifm-background-surface-color);
+  font-weight: 600;
+  padding: 12px;
+  text-align: left;
+  border-bottom: 2px solid var(--ifm-border-color);
+}
+
+td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--ifm-border-color);
+}
+
+/* Security status indicators */
+.security-status {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-left: 8px;
+}
+
+.security-status.secure {
+  background: var(--security-green);
+  color: white;
+}
+
+.security-status.warning {
+  background: var(--security-yellow);
+  color: white;
+}
+
+.security-status.danger {
+  background: var(--security-red);
+  color: white;
+}
+
+.security-status.info {
+  background: var(--security-blue);
+  color: white;
+}
+
+/* Mermaid diagram styling */
+.mermaid {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+/* Admonition styling */
+.admonition {
+  border-radius: var(--ifm-border-radius);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  margin: 1.5rem 0;
+}
+
+/* Footer styling */
+.footer {
+  background: var(--ifm-background-surface-color);
+  border-top: 1px solid var(--ifm-border-color);
+}
+
+.footer__title {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  .hero__title {
+    font-size: 2rem;
+  }
+  
+  .hero__subtitle {
+    font-size: 1rem;
+  }
+  
+  .hero {
+    padding: 2rem 0;
+  }
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Homepage feature cards */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.feature-card {
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-border-color);
+  border-radius: var(--ifm-card-border-radius);
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--ifm-color-primary);
+}
+
+.feature-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--ifm-heading-color);
+}
+
+.feature-description {
+  color: var(--ifm-font-color-secondary);
+  line-height: 1.6;
+}
