@@ -122,19 +122,6 @@ const config: Config = {
           ],
         },
         {
-          title: 'Sprint Documentation',
-          items: [
-            {
-              label: 'Sprint 1 - VM Setup',
-              to: '/docs/sprint-documentation/sprint-1',
-            },
-            {
-              label: 'Sprint 2 - Hardening',
-              to: '/docs/sprint-documentation/sprint-2',
-            },
-          ],
-        },
-        {
           title: 'Deployment',
           items: [
             {

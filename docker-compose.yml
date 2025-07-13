@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  docusaurus:
+    build: .
+    container_name: docusaurus-app
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    networks:
+      - docusaurus-network
+
+  # Optional: Add certbot for SSL in Docker
+  certbot:
+    image: certbot/certbot
+    container_name: certbot
+    volumes:
+      - ./certbot/conf:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
+    command: certonly --webroot --webroot-path=/var/www/certbot --email your-email@example.com --agree-tos --no-eff-email -d yourdomain.com -d www.yourdomain.com
+
+networks:
+  docusaurus-network:
+    driver: bridge
+
+volumes:
+  certbot_conf:
+  certbot_www:

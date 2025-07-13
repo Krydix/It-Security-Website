@@ -22,14 +22,6 @@ const sidebars: SidebarsConfig = {
     'web-security-lamp',
     'cryptography-security',
     'windows-security-analysis',
-    {
-      type: 'category',
-      label: 'Sprint Documentation',
-      items: [
-        'sprint-documentation/sprint-1',
-        'sprint-documentation/sprint-2',
-      ],
-    },
     'production-deployment',
   ],
 
