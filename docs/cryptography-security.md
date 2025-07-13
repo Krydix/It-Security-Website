@@ -166,7 +166,7 @@ graph TB
     subgraph "Salt Example: Password"
         D[Password: mypassword]
         E[Salt: xyz789]
-        F[Hash: bcrypt(password + salt)]
+        F["Hash: bcrypt password + salt"]
         D --> F
         E --> F
     end
