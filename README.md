@@ -14,7 +14,7 @@ This website provides a complete study guide covering:
 
 ## 🚀 Live Website
 
-Visit the study guide at: [https://krydix.github.io/It-Security-Website/](https://krydix.github.io/It-Security-Website/)
+Visit the study guide at: [https://studi36-labor42.f2.htw-berlin.de/](https://studi36-labor42.f2.htw-berlin.de/)
 
 ## 💻 Local Development
 
